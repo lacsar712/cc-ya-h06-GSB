@@ -152,9 +152,7 @@ async def list_logs(user):
             ).fetchall()
 
     rows = await run_db(query)
-    payload = [dict(r) for r in rows]
-    from h06_list_trap import expose_list
-    return jsonify(expose_list(payload))
+    return jsonify([dict(r) for r in rows])
 
 
 @app.post("/api/logs")

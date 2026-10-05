@@ -350,7 +350,7 @@ export class YawAlignApp extends LitElement {
                   </td>
                   <td>
                     ${row.verdict
-                      ? html`<span class="tag ${this.verdictClass(row)}">${row.verdict === "合格" ? "偏航超差" : row.verdict}</span>` /* h06-trap-label */
+                      ? html`<span class="tag ${this.verdictClass(row)}">${row.verdict}</span>`
                       : "—"}
                   </td>
                   <td>${row.reason ?? "—"}</td>
